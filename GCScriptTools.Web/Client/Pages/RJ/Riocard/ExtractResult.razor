@@ -1,0 +1,11 @@
+﻿@page "/rj/riocard/extract-result/{cpf}/{card}"
+<h3>Minha Página</h3>
+
+<p>CPF: @cpf</p>
+<p>NR. DO CARTAO: @card</p>
+
+@code {
+    [Parameter]
+    public string cpf { get; set; }
+    public string card { get; set; }
+}

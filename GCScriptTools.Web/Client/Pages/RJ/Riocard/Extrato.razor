@@ -1,0 +1,28 @@
+﻿@page "/rj/riocard/extrato"
+@using System.Net.Http.Headers;
+
+@inject IJSRuntime JSRuntime
+
+<MudForm Style="margin:auto; width:300px">
+    <MudText Typo="Typo.h6" Align="Align.Center" Class="mb-2">EXTRATO</MudText>
+    <MudTextField @bind-Value="Cpf" Label="CPF" Variant="Variant.Filled" Clearable="true" Required = "true" RequiredError = "Insira o CPF" Disabled = "@isConsulting" Class = "mb-2"></MudTextField>
+    <MudTextField @bind-Value="NrDoCartao" Label="Nr. do Cartão" Variant="Variant.Filled" Clearable = "true" Required = "true" RequiredError = "Insira o Nr. do Cartão" Disabled = "@isConsulting" Class = "mb-2"></MudTextField>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width:100%; height:50px" @onclick="ConsultarAsync" Disabled = "@isConsulting">Consultar</MudButton>
+</MudForm>
+
+@code {
+    private bool isConsulting = false;
+    private string Cpf { get; set; }
+    private string NrDoCartao { get; set; }
+
+    private async Task ConsultarAsync()
+    {
+        isConsulting = true;
+        StateHasChanged();
+
+        await Task.Delay(3000);
+
+        isConsulting = false;
+        StateHasChanged();
+    }
+}
