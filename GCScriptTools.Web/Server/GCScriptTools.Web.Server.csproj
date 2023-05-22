@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-	  <InternalsVisibleTo Include="GCScriptTools.Web.Tests"/>
+	  <InternalsVisibleTo Include="GCScriptTools.Web.Tests" />
   </ItemGroup>
 
 </Project>
