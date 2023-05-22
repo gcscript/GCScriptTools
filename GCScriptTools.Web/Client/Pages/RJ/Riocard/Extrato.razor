@@ -8,9 +8,12 @@
     <MudTextField @bind-Value="Cpf" Label="CPF" Variant="Variant.Filled" Clearable="true" Required = "true" RequiredError = "Insira o CPF" Disabled = "@isConsulting" Class = "mb-2"></MudTextField>
     <MudTextField @bind-Value="NrDoCartao" Label="Nr. do Cartão" Variant="Variant.Filled" Clearable = "true" Required = "true" RequiredError = "Insira o Nr. do Cartão" Disabled = "@isConsulting" Class = "mb-2"></MudTextField>
     <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width:100%; height:50px" @onclick="ConsultarAsync" Disabled = "@isConsulting">Consultar</MudButton>
+
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width:100%; height:50px" @onclick="Teste" Disabled="@isConsulting">Teste</MudButton>
 </MudForm>
 
 @code {
+    [Inject] HttpClient _httpClient { get; set; }
     private bool isConsulting = false;
     private string Cpf { get; set; }
     private string NrDoCartao { get; set; }
@@ -24,4 +27,12 @@
         isConsulting = false;
         StateHasChanged();
     }
+
+    private async Task Teste()
+    {
+        var r = await _httpClient.GetFromJsonAsync<Product>("api/Product/GetFromMinimal");
+        var r2 = await _httpClient.GetFromJsonAsync<Product>("api/Product/GetFromMinimal2");
+    }
+
+
 }

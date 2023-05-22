@@ -1,3 +1,4 @@
+using GCScriptTools.Web.Shared.Models;
 using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +32,10 @@ app.UseRouting();
 
 app.MapRazorPages();
 app.MapControllers();
+
+app.MapGet("api/Product/GetFromMinimal", () => new Product() { Id = Guid.NewGuid(), Name = "Minimal Product" });
+app.MapGet("api/Product/GetFromMinimal2", () => new Product() { Id = Guid.NewGuid(), Name = "Minimal Product 2" });
+
 app.MapFallbackToFile("index.html");
 
 app.Run();
