@@ -1,3 +1,4 @@
+using GCScriptTools.Web.Server.Apis.Mappings;
 using GCScriptTools.Web.Shared.Models;
 using Microsoft.AspNetCore.ResponseCompression;
 
@@ -33,8 +34,9 @@ app.UseRouting();
 app.MapRazorPages();
 app.MapControllers();
 
-app.MapGet("api/Product/GetFromMinimal", () => new Product() { Id = Guid.NewGuid(), Name = "Minimal Product" });
-app.MapGet("api/Product/GetFromMinimal2", () => new Product() { Id = Guid.NewGuid(), Name = "Minimal Product 2" });
+
+// API's Endopoint mappings:
+app.MapApis();
 
 app.MapFallbackToFile("index.html");
 

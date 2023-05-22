@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GCScriptTools.Web.Client", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GCScriptTools.Web.Shared", "GCScriptTools.Web\Shared\GCScriptTools.Web.Shared.csproj", "{277BC5AD-8C1E-4F6D-AF8F-65DF4F2BE3E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCScriptTools.Web.Tests", "GCScriptTools.Web\Test\GCScriptTools.Web.Tests.csproj", "{C91AC80C-9438-48DC-9225-8B5549D68029}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{277BC5AD-8C1E-4F6D-AF8F-65DF4F2BE3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{277BC5AD-8C1E-4F6D-AF8F-65DF4F2BE3E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{277BC5AD-8C1E-4F6D-AF8F-65DF4F2BE3E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C91AC80C-9438-48DC-9225-8B5549D68029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C91AC80C-9438-48DC-9225-8B5549D68029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C91AC80C-9438-48DC-9225-8B5549D68029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C91AC80C-9438-48DC-9225-8B5549D68029}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
