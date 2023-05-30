@@ -16,5 +16,8 @@
     <ProjectReference Include="..\Shared\GCScriptTools.Web.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+	  <InternalsVisibleTo Include="GCScriptTools.Web.Tests" />
+  </ItemGroup>
 
 </Project>
